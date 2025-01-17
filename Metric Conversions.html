@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metric Conversions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="assets\favicon-32x32.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        *{
+            font-family: "Inter", serif;
+        }
+        body{
+            background-color: #FFF5E1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and Navbar -->
+    <section id="header">
+        <header class="navigation position-absolute w-100" style="transition: top 2s;">
+            <nav class="navbar navbar-expand-xl bg-warning" aria-label="Offcanvas navbar large">
+                <div class="container py-1">
+                    <a href="#" class="navbar-brand">
+                        <img src="assets\logo.png" width="42" height="42" alt="logo">
+                        <span class="fw-bold">Metric Conversions</span>
+                    </a>
+    
+                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+                        <div class="offcanvas-header bg-warning" style="padding: 2rem 2rem 1.5rem 2rem;">
+                            <h5 class="offcanvas-title m-0" id="offcanvasNavbar2Label">
+                                <a class="navbar-brand" href="javascript:;">
+                                    <img src="assets\logo.png" height="32" alt="logo">
+                                    <span class="fw-bold">Metric Conversions</span>
+                                </a>
+                            </h5>
+                            <button type="button" class="btn-close text-body-emphasis" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+    
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav align-items-xl-center flex-grow-1 column-gap-4 row-gap-4 row-gap-xl-2">
+                                <li class="nav-item ms-xl-auto">
+                                    <a href="index.html" class="px-3 text-body-emphasis bg-body-secondary-hover nav-link rounded-3 text-base leading-6 fw-semibold" aria-current="page">
+                                        Home
+                                    </a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="Metric Conversions.html" class="px-3 text-body-emphasis bg-body-secondary-hover nav-link rounded-3 text-base leading-6 fw-semibold">
+                                        Metric Conversions
+                                    </a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="History.html" class="px-3 text-body-emphasis bg-body-secondary-hover nav-link rounded-3 text-base leading-6 fw-semibold">
+                                        History of Metric System
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="Articles.html" class="px-3 text-body-emphasis bg-body-secondary-hover nav-link rounded-3 text-base leading-6 fw-semibold">
+                                        Articles
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="FAQs.html" class="px-3 text-body-emphasis bg-body-secondary-hover nav-link rounded-3 text-base leading-6 fw-semibold">
+                                        FAQs
+                                    </a>
+                                </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator">
+        <div class="container pt-5" style="margin-bottom: 16.2%;">
+            <h1 class="text-center text-uppercase fw-bold text-secondary pt-5">Metric Conversion Calculator</h1>
+            <div class="row justify-content-center pt-5">
+                <div class="col-md-6">
+                    <form id="conversion-form">
+                        <div class="form-group">
+                            <label for="value">Enter Value:</label>
+                            <input type="number" step="any" class="form-control" id="value" placeholder="Value to convert" required>
+                        </div>
+                        <div class="form-group pt-4">
+                            <label for="unit">Select Conversion:</label>
+                            <select class="form-control" id="unit" required>
+
+                                <optgroup label="Length">
+                                    <option value="km-to-m">📐 Kilometers to Meters</option>
+                                    <option value="m-to-km">📐 Meters to Kilometers</option>
+                                    <option value="m-to-ft">📐 Meters to Feet</option>
+                                    <option value="ft-to-m">📐 Feet to Meters</option>
+                                    <option value="cm-to-in">📐 Centimeters to Inches</option>
+                                    <option value="in-to-cm">📐 Inches to Centimeters</option>
+                                    <option value="mm-to-in">📐 Millimeters to Inches</option>
+                                    <option value="in-to-mm">📐 Inches to Millimeters</option>
+                                    <option value="mi-to-km">📐 Miles to Kilometers</option>
+                                    <option value="km-to-mi">📐 Kilometers to Miles</option>
+                                    <option value="yd-to-m">📐 Yards to Meters</option>
+                                    <option value="m-to-yd">📐 Meters to Yards</option>
+                                </optgroup>
+
+                                <optgroup label="Area">
+                                    <option value="sqm-to-sqft">🧭 Square Meters to Square Feet</option>
+                                    <option value="sqft-to-sqm">🧭 Square Feet to Square Meters</option>
+                                    <option value="ha-to-ac">🧭 Hectares to Acres</option>
+                                    <option value="ac-to-ha">🧭 Acres to Hectares</option>
+                                    <option value="a-to-sqm">🧭 Ares to Square Meters</option>
+                                    <option value="sqm-to-ha">🧭 Square Meters to Hectares</option>
+                                    <option value="sqft-to-ac">🧭 Square Feet to Acres</option>
+                                    <option value="ac-to-sqft">🧭 Acres to Square Feet</option>
+                                    <option value="sqmi-to-sqkm">🧭 Square Miles to Square Kilometers</option>
+                                    <option value="sqkm-to-sqmi">🧭 Square Kilometers to Square Miles</option>
+                                    <option value="sqm-to-sqyd">🧭 Square Meters to Square Yards</option>
+                                </optgroup>
+
+                                <optgroup label="Volume">
+                                    <option value="l-to-gal">🧃 Liters to Gallons</option>
+                                    <option value="gal-to-l">🧃 Gallons to Liters</option>
+                                    <option value="ml-to-fl-oz">🧃 Milliliters to Fluid Ounces</option>
+                                    <option value="fl-oz-to-ml">🧃 Fluid Ounces to Milliliters</option>
+                                    <option value="cubicm-to-l">🧃 Cubic Meters to Liters</option>
+                                    <option value="l-to-cubicm">🧃 Liters to Cubic Meters</option>
+                                    <option value="cubicft-to-gal">🧃 Cubic Feet to Gallons</option>
+                                    <option value="gal-to-cubicft">🧃 Gallons to Cubic Feet</option>
+                                    <option value="cubicin-to-l">🧃 Cubic Inches to Liters</option>
+                                    <option value="l-to-cubicin">🧃 Liters to Cubic Inches</option>
+                                    <option value="cubicyd-to-l">🧃 Cubic Yards to Liters</option>
+                                    <option value="l-to-cubicyd">🧃 Liters to Cubic Yards</option>
+                                    <option value="cubicm-to-cubicft">🧃 Cubic Meters to Cubic Feet</option>
+                                    <option value="cubicft-to-cubicm">🧃 Cubic Feet to Cubic Meters</option>
+                                    <option value="cubicm-to-cubicin">🧃 Cubic Meters to Cubic Inches</option>
+                                    <option value="cubicin-to-cubicm">🧃 Cubic Inches to Cubic Meters</option>
+                                    <option value="cubicyd-to-cubicm">🧃 Cubic Yards to Cubic Meters</option>
+                                    <option value="cubicm-to-cubicyd">🧃 Cubic Meters to Cubic Yards</option>
+                                    <option value="cubicft-to-gal">🧃 Cubic Feet to Gallons</option>
+                                    <option value="gal-to-cubicft">🧃 Gallons to Cubic Feet</option>
+                                    <option value="l-to-ml">🧃 Liters to Milliliters</option>
+                                    <option value="ml-to-l">🧃 Milliliters to Liters</option>
+                                </optgroup>
+
+                                <optgroup label="Mass">
+                                    <option value="kg-to-lbs">⚖️ Kilograms to Pounds</option>
+                                    <option value="lbs-to-kg">⚖️ Pounds to Kilograms</option>
+                                    <option value="g-to-oz">⚖️ Grams to Ounces</option>
+                                    <option value="oz-to-g">⚖️ Ounces to Grams</option>
+                                    <option value="mg-to-g">⚖️ Milligrams to Grams</option>
+                                    <option value="g-to-mg">⚖️ Grams to Milligrams</option>
+                                    <option value="stone-to-kg">⚖️ Stones to Kilograms</option>
+                                    <option value="kg-to-stone">⚖️ Kilograms to Stones</option>
+                                    <option value="metric-ton-to-lbs">⚖️ Metric Tons to Pounds</option>
+                                    <option value="lbs-to-metric-ton">⚖️ Pounds to Metric Tons</option>
+                                </optgroup>
+
+                                <optgroup label="Temperature">
+                                    <option value="c-to-f">🌡️ Celsius to Fahrenheit</option>
+                                    <option value="f-to-c">🌡️ Fahrenheit to Celsius</option>
+                                    <option value="k-to-c">🌡️ Kelvin to Celsius</option>
+                                    <option value="c-to-k">🌡️ Celsius to Kelvin</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="text-center">
+                        <button type="submit" class="btn btn-danger btn-lg btn-block mt-3">Convert</button>
+                    </div>
+                    </form>
+                    <div class="mt-3" id="result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+
+    <section id="footer">
+        <footer class="mt-5" style="background-color: #ffe3bee8;" data-aos="fade-up">
+            <div class="container p-4">
+              <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="mb-3 text-uppercase" style="letter-spacing: 2px; color: #7f4722;">metric conversions</h5>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-1">
+                      <a href="Metric Conversions.html" style="color: #4f4f4f;"> Conversions</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="mb-3 text-uppercase" style="letter-spacing: 2px; color: #7f4722;">history</h5>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-1">
+                      <a href="History.html" style="color: #4f4f4f;">History Of Metric System</a>
+                    </li>
+                   
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="mb-3 text-uppercase" style="letter-spacing: 2px; color: #7f4722;">articles</h5>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-1">
+                      <a href="Articles.html" style="color: #4f4f4f;">Conversions Articles</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="mb-3 text-uppercase" style="letter-spacing: 2px; color: #7f4722;">FAQs</h5>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-1">
+                      <a href="FAQs.html" style="color: #4f4f4f;">FAQs</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2025
+              <a class="text-dark" href="index.html">Metric Conversions</a>
+            </div>
+           
+          </footer>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('conversion-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const value = parseFloat(document.getElementById('value').value);
+    const unit = document.getElementById('unit').value;
+    let result;
+
+    switch (unit) {
+        // Length
+        case "km-to-m":
+            result = (value * 1000).toFixed(2);
+            document.getElementById('result').innerText = `${value} Kilometers = ${result} Meters`;
+            break;
+        case "m-to-km":
+            result = (value / 1000).toFixed(2);
+            document.getElementById('result').innerText = `${value} Meters = ${result} Kilometers`;
+            break;
+        case "m-to-ft":
+            result = (value * 3.28084).toFixed(2);
+            document.getElementById('result').innerText = `${value} Meters = ${result} Feet`;
+            break;
+        case "ft-to-m":
+            result = (value / 3.28084).toFixed(2);
+            document.getElementById('result').innerText = `${value} Feet = ${result} Meters`;
+            break;
+        case "cm-to-in":
+            result = (value / 2.54).toFixed(2);
+            document.getElementById('result').innerText = `${value} Centimeters = ${result} Inches`;
+            break;
+        case "in-to-cm":
+            result = (value * 2.54).toFixed(2);
+            document.getElementById('result').innerText = `${value} Inches = ${result} Centimeters`;
+            break;
+        case "mm-to-in":
+            result = (value / 25.4).toFixed(2);
+            document.getElementById('result').innerText = `${value} Millimeters = ${result} Inches`;
+            break;
+        case "in-to-mm":
+            result = (value * 25.4).toFixed(2);
+            document.getElementById('result').innerText = `${value} Inches = ${result} Millimeters`;
+            break;
+        case "mi-to-km":
+            result = (value * 1.60934).toFixed(2);
+            document.getElementById('result').innerText = `${value} Miles = ${result} Kilometers`;
+            break;
+        case "km-to-mi":
+            result = (value / 1.60934).toFixed(2);
+            document.getElementById('result').innerText = `${value} Kilometers = ${result} Miles`;
+            break;
+        case "yd-to-m":
+            result = (value / 1.09361).toFixed(2);
+            document.getElementById('result').innerText = `${value} Yards = ${result} Meters`;
+            break;
+        case "m-to-yd":
+            result = (value * 1.09361).toFixed(2);
+            document.getElementById('result').innerText = `${value} Meters = ${result} Yards`;
+            break;
+
+        // Area
+        case "sqm-to-sqft":
+            result = (value * 10.7639).toFixed(2);
+            document.getElementById('result').innerText = `${value} Square Meters = ${result} Square Feet`;
+            break;
+        case "sqft-to-sqm":
+            result = (value / 10.7639).toFixed(2);
+            document.getElementById('result').innerText = `${value} Square Feet = ${result} Square Meters`;
+            break;
+        case "ha-to-ac":
+            result = (value * 2.47105).toFixed(2);
+            document.getElementById('result').innerText = `${value} Hectares = ${result} Acres`;
+            break;
+        case "ac-to-ha":
+            result = (value / 2.47105).toFixed(2);
+            document.getElementById('result').innerText = `${value} Acres = ${result} Hectares`;
+            break;
+        case "a-to-sqm":
+            result = (value * 100).toFixed(2);
+            document.getElementById('result').innerText = `${value} Ares = ${result} Square Meters`;
+            break;
+        case "sqm-to-ha":
+            result = (value / 10000).toFixed(2);
+            document.getElementById('result').innerText = `${value} Square Meters = ${result} Hectares`;
+            break;
+        case "sqft-to-ac":
+            result = (value / 43560).toFixed(2);
+            document.getElementById('result').innerText = `${value} Square Feet = ${result} Acres`;
+            break;
+        case "ac-to-sqft":
+            result = (value * 43560).toFixed(2);
+            document.getElementById('result').innerText = `${value} Acres = ${result} Square Feet`;
+            break;
+        case "sqmi-to-sqkm":
+            result = (value * 2.58999).toFixed(2);
+            document.getElementById('result').innerText = `${value} Square Miles = ${result} Square Kilometers`;
+            break;
+        case "sqkm-to-sqmi":
+            result = (value / 2.58999).toFixed(2);
+            document.getElementById('result').innerText = `${value} Square Kilometers = ${result} Square Miles`;
+            break;
+        case "sqm-to-sqyd":
+            result = (value * 1.19599).toFixed(2);
+            document.getElementById('result').innerText = `${value} Square Meters = ${result} Square Yards`;
+            break;
+
+        // Volume
+        case "l-to-gal":
+            result = (value * 0.264172).toFixed(2);
+            document.getElementById('result').innerText = `${value} Liters = ${result} Gallons`;
+            break;
+        case "gal-to-l":
+            result = (value / 0.264172).toFixed(2);
+            document.getElementById('result').innerText = `${value} Gallons = ${result} Liters`;
+            break;
+        case "ml-to-fl-oz":
+            result = (value * 0.033814).toFixed(2);
+            document.getElementById('result').innerText = `${value} Milliliters = ${result} Fluid Ounces`;
+            break;
+        case "fl-oz-to-ml":
+            result = (value / 0.033814).toFixed(2);
+            document.getElementById('result').innerText = `${value} Fluid Ounces = ${result} Milliliters`;
+            break;
+        case "cubicm-to-l":
+            result = (value * 1000).toFixed(2);
+            document.getElementById('result').innerText = `${value} Cubic Meters = ${result} Liters`;
+            break;
+        case "l-to-cubicm":
+            result = (value / 1000).toFixed(2);
+            document.getElementById('result').innerText = `${value} Liters = ${result} Cubic Meters`;
+            break;
+        case "cubicft-to-gal":
+            result = (value * 7.48052).toFixed(2);
+            document.getElementById('result').innerText = `${value} Cubic Feet = ${result} Gallons`;
+            break;
+        case "gal-to-cubicft":
+            result = (value / 7.48052).toFixed(2);
+            document.getElementById('result').innerText = `${value} Gallons = ${result} Cubic Feet`;
+            break;
+        case "cubicin-to-l":
+            result = (value * 0.0163871).toFixed(2);
+            document.getElementById('result').innerText = `${value} Cubic Inches = ${result} Liters`;
+            break;
+        case "l-to-cubicin":
+            result = (value / 0.0163871).toFixed(2);
+            document.getElementById('result').innerText = `${value} Liters = ${result} Cubic Inches`;
+            break;
+        case "cubicyd-to-l":
+            result = (value * 764.555).toFixed(2);
+            document.getElementById('result').innerText = `${value} Cubic Yards = ${result} Liters`;
+            break;
+        case "l-to-cubicyd":
+            result = (value / 764.555).toFixed(2);
+            document.getElementById('result').innerText = `${value} Liters = ${result} Cubic Yards`;
+            break;
+        case "cubicm-to-cubicft":
+            result = (value * 35.3147).toFixed(2);
+            document.getElementById('result').innerText = `${value} Cubic Meters = ${result} Cubic Feet`;
+            break;
+        case "cubicft-to-cubicm":
+            result = (value / 35.3147).toFixed(2);
+            document.getElementById('result').innerText = `${value} Cubic Feet = ${result} Cubic Meters`;
+            break;
+        case "cubicm-to-cubicin":
+            result = (value * 61023.7).toFixed(2);
+            document.getElementById('result').innerText = `${value} Cubic Meters = ${result} Cubic Inches`;
+            break;
+        case "cubicin-to-cubicm":
+            result = (value / 61023.7).toFixed(2);
+            document.getElementById('result').innerText = `${value} Cubic Inches = ${result} Cubic Meters`;
+            break;
+        case "cubicyd-to-cubicm":
+            result = (value / 1.30795).toFixed(2);
+            document.getElementById('result').innerText = `${value} Cubic Yards = ${result} Cubic Meters`;
+            break;
+        case "cubicm-to-cubicyd":
+            result = (value * 1.30795).toFixed(2);
+            document.getElementById('result').innerText = `${value} Cubic Meters = ${result} Cubic Yards`;
+            break;
+        case "l-to-ml":
+            result = (value * 1000).toFixed(2);
+            document.getElementById('result').innerText = `${value} Liters = ${result} Milliliters`;
+            break;
+        case "ml-to-l":
+            result = (value / 1000).toFixed(2);
+            document.getElementById('result').innerText = `${value} Milliliters = ${result} Liters`;
+            break;
+
+        // Mass
+        case "kg-to-lbs":
+            result = (value * 2.20462).toFixed(2);
+            document.getElementById('result').innerText = `${value} Kilograms = ${result} Pounds`;
+            break;
+        case "lbs-to-kg":
+            result = (value / 2.20462).toFixed(2);
+            document.getElementById('result').innerText = `${value} Pounds = ${result} Kilograms`;
+            break;
+        case "g-to-oz":
+            result = (value * 0.035274).toFixed(2);
+            document.getElementById('result').innerText = `${value} Grams = ${result} Ounces`;
+            break;
+        case "oz-to-g":
+            result = (value / 0.035274).toFixed(2);
+            document.getElementById('result').innerText = `${value} Ounces = ${result} Grams`;
+            break;
+        case "mg-to-g":
+            result = (value / 1000).toFixed(2);
+            document.getElementById('result').innerText = `${value} Milligrams = ${result} Grams`;
+            break;
+        case "g-to-mg":
+            result = (value * 1000).toFixed(2);
+            document.getElementById('result').innerText = `${value} Grams = ${result} Milligrams`;
+            break;
+        case "stone-to-kg":
+            result = (value * 6.35029).toFixed(2);
+            document.getElementById('result').innerText = `${value} Stones = ${result} Kilograms`;
+            break;
+        case "kg-to-stone":
+            result = (value / 6.35029).toFixed(2);
+            document.getElementById('result').innerText = `${value} Kilograms = ${result} Stones`;
+            break;
+        case "metric-ton-to-lbs":
+            result = (value * 2204.62).toFixed(2);
+            document.getElementById('result').innerText = `${value} Metric Tons = ${result} Pounds`;
+            break;
+        case "lbs-to-metric-ton":
+            result = (value / 2204.62).toFixed(2);
+            document.getElementById('result').innerText = `${value} Pounds = ${result} Metric Tons`;
+            break;
+
+        // Temperature
+        case "c-to-f":
+            result = (value * 9/5 + 32).toFixed(2);
+            document.getElementById('result').innerText = `${value} °C = ${result} °F`;
+            break;
+        case "f-to-c":
+            result = ((value - 32) * 5/9).toFixed(2);
+            document.getElementById('result').innerText = `${value} °F = ${result} °C`;
+            break;
+        case "k-to-c":
+            result = (value - 273.15).toFixed(2);
+            document.getElementById('result').innerText = `${value} K = ${result} °C`;
+            break;
+        case "c-to-k":
+            result = (value + 273.15).toFixed(2);
+            document.getElementById('result').innerText = `${value} °C = ${result} K`;
+            break;
+
+        default:
+            document.getElementById('result').innerText = "Invalid conversion.";
+    }
+});
+    </script>
+</body>
+</html>

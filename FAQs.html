@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="assets\favicon-32x32.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        *{
+            font-family: "Inter", serif;
+        }
+        body{
+            background-color: #FFF5E1;
+        }
+        #header {
+            position: relative;
+            z-index: 1;
+        }
+        .button{
+            text-decoration: none;
+        }
+        .navigation {
+            margin: 0;
+        }
+        #faqs {
+            padding-top: 20px;
+        }
+        .faq-title {
+            text-align: center;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+        .card {
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .faq-item {
+            animation: fadeIn 0.5s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and Navbar -->
+    <section id="header">
+        <header class="navigation position-absolute w-100" style="transition: top 2s;">
+            <nav class="navbar navbar-expand-xl bg-warning" aria-label="Offcanvas navbar large">
+                <div class="container py-1">
+                    <a href="#" class="navbar-brand">
+                        <img src="assets\logo.png" width="42" height="42" alt="logo">
+                        <span class="fw-bold">Metric Conversions</span>
+                    </a>
+    
+                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+                        <div class="offcanvas-header bg-warning" style="padding: 2rem 2rem 1.5rem 2rem;">
+                            <h5 class="offcanvas-title m-0" id="offcanvasNavbar2Label">
+                                <a class="navbar-brand" href="javascript:;">
+                                    <img src="assets\logo.png" height="32" alt="logo">
+                                    <span class="fw-bold">Metric Conversions</span>
+                                </a>
+                            </h5>
+                            <button type="button" class="btn-close text-body-emphasis" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+    
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav align-items-xl-center flex-grow-1 column-gap-4 row-gap-4 row-gap-xl-2">
+                                <li class="nav-item ms-xl-auto">
+                                    <a href="index.html" class="px-3 text-body-emphasis bg-body-secondary-hover nav-link rounded-3 text-base leading-6 fw-semibold" aria-current="page">
+                                        Home
+                                    </a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="Metric Conversions.html" class="px-3 text-body-emphasis bg-body-secondary-hover nav-link rounded-3 text-base leading-6 fw-semibold">
+                                        Metric Conversions
+                                    </a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="History.html" class="px-3 text-body-emphasis bg-body-secondary-hover nav-link rounded-3 text-base leading-6 fw-semibold">
+                                        History of Metric System
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="Articles.html" class="px-3 text-body-emphasis bg-body-secondary-hover nav-link rounded-3 text-base leading-6 fw-semibold">
+                                        Articles
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="FAQs.html" class="px-3 text-body-emphasis bg-body-secondary-hover nav-link rounded-3 text-base leading-6 fw-semibold">
+                                        FAQs
+                                    </a>
+                                </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </section>
+
+    <!-- FAQs -->
+     <section id="faqs">
+        <div class="container" style="margin-bottom: 6.1%;">
+            <h1 class="faq-title mt-5 pt-5 text-uppercase">Frequently Asked Questions</h1>
+            <div class="row">
+        
+                <div class="col-md-8 offset-md-2 faq-item">
+                    <div class="card mb-4">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link fw-bold button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How do I enter numbers in Scientific Notation?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="card-body fw-bold text-danger" style="font-size: large;">
+                                To enter numbers in scientific notation, you typically use the format N x 10^E, where N represents the coefficient (a number between 1 and 10) and E indicates the exponent, which shows how many places to move the decimal point. For instance, 5.2 x 10^3 means 5.2 multiplied by 1000, resulting in 5200, while 3.0 x 10^-2 represents 3.0 divided by 100, yielding 0.03. The method of input can vary depending on the context: in scientific calculators, you would enter the coefficient, then use the EXP or EE button followed by the exponent; in spreadsheets like Excel, you can type the number in the format of 4.5E4, which will be recognized as 4.5 x 10^4; and in programming languages, the number can often be entered as 4.5e4 to denote the same value.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-8 offset-md-2 faq-item">
+                    <div class="card mb-4">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed fw-bold button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What is a knot? What is a nautical mile?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="card-body fw-bold text-danger" style="font-size: large;">
+                                A knot is a unit of speed used particularly in maritime and aviation contexts, equal to one nautical mile per hour. One knot means that a vessel or aircraft is traveling at a speed of one nautical mile in one hour. The term originates from the use of knots tied in a rope to measure a ship's speed; as the rope was let out overboard, the number of knots that passed through a sailor's hands in a certain amount of time indicated the speed.
+
+                                A nautical mile, on the other hand, is a unit of distance used in maritime and air navigation. It is defined as exactly 1,852 meters or about 1.1508 statute miles. The nautical mile is based on the circumference of the Earth and is designed to correspond to one minute of latitude, making it especially useful for navigation since one nautical mile roughly corresponds to one minute of latitude on Earth’s surface. This relationship allows navigators to easily relate distance to coordinate systems in their charts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-8 offset-md-2 faq-item">
+                    <div class="card mb-4">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed fw-bold button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What about rainfall? How do I convert between inches of rain, and millimeters of rain?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="card-body fw-bold text-danger">
+                                Rainfall is typically measured in units of depth, reflecting the amount of precipitation that falls over a specific area. To convert between inches of rain and millimeters of rain, you can use the conversion factor that 1 inch is equivalent to 25.4 millimeters. Therefore, to convert inches to millimeters, you multiply the number of inches by 25.4. For example, if you have 2 inches of rain, that would convert to 2 x 25.4, equaling 50.8 millimeters. Conversely, to convert from millimeters to inches, you divide the number of millimeters by 25.4. This ability to switch between the two units allows for better understanding and communication of rainfall amounts, especially since different regions may use different measurement systems.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-8 offset-md-2 faq-item">
+                    <div class="card mb-4">
+                        <div class="card-header" id="headingFour">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed fw-bold button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    What is the difference between the long ton, short ton, and metric ton?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                            <div class="card-body fw-bold text-danger">
+                                The long ton, short ton, and metric ton are all units of weight but differ in their definitions. 
+
+                                The long ton, used mostly in the UK, is equal to 1,016 kilograms or 2,240 pounds. The short ton, primarily found in the US, is equal to 907.185 kilograms or 2,000 pounds. Lastly, the metric ton, often represented as "tonne," is used in the metric system and equals 1,000 kilograms or approximately 2,204.62 pounds. 
+
+                                Each of these tons is used in different contexts and regions, making it essential to know which one is relevant for a given situation.
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-8 offset-md-2 faq-item">
+                    <div class="card mb-4">
+                        <div class="card-header" id="headingFive">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed fw-bold button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    At what temperature are Celsius and Fahrenheit the same?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                            <div class="card-body fw-bold text-danger">
+                                Celsius and Fahrenheit are the same at -40 degrees. This means that -40°C is equal to -40°F.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+     </section>
+
+    <!-- Footer -->
+
+    <section id="footer">
+        <footer class="mt-5" style="background-color: #ffe3bee8;" data-aos="fade-up">
+            <div class="container p-4">
+              <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="mb-3 text-uppercase" style="letter-spacing: 2px; color: #7f4722;">metric conversions</h5>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-1">
+                      <a href="Metric Conversions.html" style="color: #4f4f4f;"> Conversions</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="mb-3 text-uppercase" style="letter-spacing: 2px; color: #7f4722;">history</h5>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-1">
+                      <a href="History.html" style="color: #4f4f4f;">History Of Metric System</a>
+                    </li>
+                   
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="mb-3 text-uppercase" style="letter-spacing: 2px; color: #7f4722;">articles</h5>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-1">
+                      <a href="Articles.html" style="color: #4f4f4f;">Conversions Articles</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <h5 class="mb-3 text-uppercase" style="letter-spacing: 2px; color: #7f4722;">FAQs</h5>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-1">
+                      <a href="FAQs.html" style="color: #4f4f4f;">FAQs</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2025
+              <a class="text-dark" href="index.html">Metric Conversions</a>
+            </div>
+           
+          </footer>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
